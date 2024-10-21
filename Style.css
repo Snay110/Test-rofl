@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgb(26, 30, 31);
+}
 
 .container{
     max-width: 100%;
@@ -12,7 +14,7 @@
 
 .list__item{
     display: none;
-  
+
 }
 .san-photo{
     width: 150px;
@@ -23,7 +25,7 @@
 img{
     width: 550px;
     height: 550px;
-    border-radius: 35%;
+    border-radius: 30%;
     object-fit: cover;
 }
 
