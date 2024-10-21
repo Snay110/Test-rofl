@@ -1,176 +1,58 @@
-*{
-	margin: 0;
-	padding: 10px;
-	box-sizing: border-box;
-  }
-  body {
-	background: rgb(131,58,180);
-	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(2,45,54,1) 50%);
-  }
-  button {
-	border: 2px solid black;
-	border-radius: 10px;
-	text-align: center;
-	background-color: aqua;
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: 600;
-	padding: 10px;
-	cursor: pointer;
-	transition: background-color .2s linear;
-  } 
-  button:hover{
-	background-color: rgb(9, 199, 199);
-  }
-  .container{
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	text-align: center;
-	height: 600px;
-	justify-content: center;
-	font-family: "Montserrat", sans-serif;
-  }
 
-  .shadow{
-	background: black;
-	opacity: 0.5;
-	width: 100%;
-	height: 100vh;
-	position: absolute;
-  }
-  
-  h1{
-	margin: 30px 0px 20px;
-	text-shadow: 2px 2px;
-	color: antiquewhite;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1.5);
-	line-height: 1.4;
-  }
-  .description {
-	font-weight: 400;
-	font-size: 18px;
-	margin-bottom: 40px;
-	color: aliceblue;
-  }
-  .list {
-	display: flex;
-	margin: 0 auto;
-	height: 60%;
-	width: 100%;
-	flex-direction: row;
-	justify-content: center;
-  }
-  .list__item {
-	display: flex;
-	flex-direction: column;
-	flex-basis: 30%;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
-	width: 100%;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
-	
-  }
-  .list__item:first-child {
-	background-image: url('./img/3.jpg');
-	background-position: 50% 10%;
-	background-size: 130%;
-	transition: background-size .2s linear;
-  }
-  .list__item:first-child:hover {
-	background-size: 150%;
-  }
-  
-  .list__item:nth-child(2) {
-	background-image: url('./img/1.jpg');
-	background-position: 50% 100%;
-	background-size: 160%;
-	transition: background-size .2s linear;
-  }
-  
-  .list__item:nth-child(2):hover {
-	background-size: 170%;
-  }
-  
-  .list__item:last-child {
-	background-image: url('./img/2.jpg');
-	background-position: 50% 100%;
-	background-size: 135%;
-	border: 2px solid black;
-	transition: background-size .2s linear;
-  }
-  
-  .list__item:last-child:hover {
-	background-size: 150%;
-  }
-  
-  h2{
-	color: aliceblue;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1.5);
-  }
-  .modal__window {
-	display: flex;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,85,1,) 35%, rgba(0,212,255,1) 100%);
-	padding: 20px;
-	border-radius: 10px;
-  }
-  /* .modal__window {
-	display: flex;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,85,1,) 35%, rgba(0,212,255,1) 100%);
-  } */
-  svg{
-	position: absolute;
-	right: 5%;
-	top: 5%;
-  }
-  .modal__window-close {
-	cursor: pointer;
-	color: black;
-  }
-  form{
-	margin: 0;
-	padding: 20px;
-	text-align: left;
-  }
-  .question{
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: 600;
-	font-family: 'Montserrat', sans-serif;
-	color: aliceblue;
-	text-shadow: 2px 2px  5px rgba(0, 0, 0, 1.5);
-	margin-bottom: 40px;
-  }
 
-  .form__list{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 80px;
-	margin-bottom: 40px;
-  }
-  input{
-	margin-right: 10px;
-  }
+.container{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
 
-  label{
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: 600;
-	font-family: 'Montserrat', sans-serif;
-	color: aliceblue;
-	text-shadow: 2px 2px   5px rgba(0, 0, 0, 1.5);
-	margin-bottom: 20px;
+.list__item{
+    display: none;
+  
+}
+.san-photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+img{
+    width: 550px;
+    height: 550px;
+    border-radius: 35%;
+    object-fit: cover;
+}
 
-  }
+
+
+button{
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+
+}
+
+#Prev{
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    right: 10px;
+    top: 80%;
+    transform: translateY(-50%);
+}
+#Next{
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    position: absolute ;
+    left: 10px;
+    top: 80%;
+    transform: translateY(-50%);
+}
